@@ -30,6 +30,6 @@ I wrote some psuedocode for the build script.
 
 And that's it! I wanted ln to be dead simple and very extensible so that if I need to add something later, I wouldn't have to rewrite the whole thing.
 
-* TODO
-** ln CLI
-** Getting started section
+** TODOS
+	 - ln CLI
+	 - Getting started section
