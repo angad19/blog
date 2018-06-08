@@ -2,7 +2,7 @@
 
 I need a way to generate my blog. I tried Jekyll and co. but none of them seemed to fit in with my workflow. I found Jekyll to be extremely overkill for the simple things I wanted to do. I don't know a lot of React, so all the React-based ones were off the table. I thought about using Metalsmith, but it was too barebones. There are a lot of Python based generators (Mike Zamansky runs his [[https://cestlaz.github.io][blog]] on [[https://github.com/getnikola/nikola][Nikola]]), but I suck at Python I don't seem to be getting better.
 
-So I decided to roll my own. I didn't want it to be markdown based, since I prefer org-mode. And I couldn't find any good org-mode parsers written in JavaScript (I plan to write one when I get the time). Introducing ln, an extensible, JSON-based, blog framework written in JavaScript.
+So I decided to roll my own. I didn't want it to be markdown based, since I prefer org-mode. And I couldn't find any good org-mode parsers written in JavaScript (I plan to write one when I get the time). Introducing ln, an extensible, JSON-based, static site generator written in JavaScript.
 
 Ln also has a config file (=config.js=), the exports of the config file are also passed to plugins.
 
@@ -32,3 +32,4 @@ And that's it! I wanted ln to be dead simple and very extensible so that if I ne
 
 * TODO
 ** ln CLI
+** Getting started section
