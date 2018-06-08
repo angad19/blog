@@ -1,0 +1,14 @@
+[
+	{
+		"title": "Post One",
+		"date": "2018-06-16 00:42",
+		"author": "Angad Singh",
+		"content": "Hey! This is post one."
+	},
+	{
+		"title": "Post Two",
+		"date": "2018-06-17 00:42",
+		"author": "Angad Singh",
+		"content": "Hey! This is post two."
+	}
+]
