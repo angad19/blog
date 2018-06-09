@@ -1,1 +1,16 @@
 #+TITLE: Plugins
+
+* clean
+	Clean public directory.
+
+* render-posts
+	Render static post pages.
+
+* render-home
+	Render homepage.
+
+* rss
+	Generate RSS feed
+
+* less
+	Compile LESS stylesheets

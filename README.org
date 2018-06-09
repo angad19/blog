@@ -4,9 +4,9 @@ I need a way to generate my blog. I tried Jekyll and co. but none of them seemed
 
 So I decided to roll my own. I didn't want it to be markdown based, since I prefer org-mode. And I couldn't find any good org-mode parsers written in JavaScript (I plan to write one when I get the time). Introducing ln, an extensible, JSON-based, static site generator written in JavaScript.
 
-Ln also has a config file (=config.js=), the exports of the config file are also passed to plugins.
-
 Ln is made up of three components - =posts.json=, where the posts are stored, =build.js= the script that builds static pages from =posts.json= and the =plugins= directory, which contains plugins which have access to =posts.json=. An ln plugin is just a function which takes =posts= as a parameter, modifies it, and returns a promise which resolves with an array of post objects. There are obviously other ways of dealing with =posts.json=, for example, you could write a script which reads all =.org= files in a directory, converts them to post objects and writes them to =posts.json=.
+
+Ln also has a config file (=config.js=), the exports of the config file are also passed to plugins.
 
 Here is an example post from =posts.json= -
 #+BEGIN_SRC json
@@ -33,3 +33,4 @@ And that's it! I wanted ln to be dead simple and very extensible so that if I ne
 ** TODOS
 	 - ln CLI
 	 - Getting started section
+	 - HTML files plugin
