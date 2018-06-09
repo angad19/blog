@@ -1,9 +1,14 @@
 {
-  "name": "new",
-  "version": "1.0.0",
-  "main": "index.js",
-	"scripts": {
-		"start": "node index.js"
-	},
-  "license": "MIT"
+ "name": "new",
+ "version": "1.0.0",
+ "main": "index.js",
+ "scripts": {
+  "start": "node index.js"
+ },
+ "license": "MIT",
+ "dependencies": {
+  "ejs": "^2.6.1",
+  "ncp": "^2.0.0",
+  "trash": "^4.3.0"
+ }
 }

@@ -4,10 +4,12 @@
 	<% let feed = 'feed.xml'; %>
 	<% include partials/head %>
 	<body>
-		<% include partials/header %>
 		<div class="container-fluid main">
+			<% include partials/header %>
 			<div class="posts list-group-flush">
-				<% for(let i in posts) { include partials/post } %>
+				<% for(let i in posts) { %>
+					<% include partials/post %>
+				<% } %>
 			</div>
 			<% include partials/footer %>
 		</div>

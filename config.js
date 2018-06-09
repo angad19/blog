@@ -2,5 +2,6 @@ const path = require('path');
 
 module.exports = {
 	build: path.resolve('./docs'),
-	assets: path.resolve('./src/assets/')
+	assets: path.resolve('./src/assets/'),
+	templates: path.resolve('./src/templates/')
 }
