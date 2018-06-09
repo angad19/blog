@@ -5,6 +5,7 @@ const ncp = promisify(require('ncp'));
 
 /**
  * clean
+ * Clean public directory.
  * @param {array} posts An array of post objects.
  * @param {object} c User config
  */

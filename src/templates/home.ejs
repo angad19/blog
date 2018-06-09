@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<% let stylesheet = 'assets/style.css'; %>
+	<% let feed = 'feed.xml'; %>
+	<% include partials/head %>
+	<body>
+		<% include partials/header %>
+		<div class="container-fluid main">
+			<div class="posts list-group-flush">
+				<% for(let i in posts) { include partials/post } %>
+			</div>
+			<% include partials/footer %>
+		</div>
+	</body>
+</html>
