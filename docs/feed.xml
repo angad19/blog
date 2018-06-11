@@ -4,8 +4,15 @@
         <description><![CDATA[Angad Singh]]></description>
         <link>http://angadsingh.me/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 11 Jun 2018 16:07:43 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 11 Jun 2018 21:21:57 GMT</lastBuildDate>
         <atom:link href="http://angadsingh.me/feed.xml/" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Nodejs file watcher]]></title>
+            <description><![CDATA[
+<p>To see changes in the browser for this blog, I]]></description>
+            <guid isPermaLink="false">1528747980000</guid>
+            <pubDate>Mon, 11 Jun 2018 20:13:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Ln: A simple, extensible static site generator]]></title>
             <description><![CDATA[
