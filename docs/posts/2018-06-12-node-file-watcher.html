@@ -22,7 +22,7 @@
 					
 <p>To see changes in the browser for this blog, I need to run the build script and refresh the browser manually. This can get tedious, so I decided to automate it.</p>
 
-<p>This is pretty easy to do in Node, because Node was built for realtime things like this. The <code>fs</code> module has a <code>watch</code> function which can watch directories and do stuff when files change. I can just run the build scriptusing <code>child_process.spawn</code>. Now I just need to find a way to reload the browser.</p>
+<p>This is pretty easy to do in Node, because Node was built for realtime things like this. The <code>fs</code> module has a <code>watch</code> function which can watch directories and do stuff when files change. I can just run the build script using <code>child_process.spawn</code>. Now I just need to find a way to reload the browser.</p>
 
 <p>The easiest way I can think of doing that is with applescript. This snippet reloads the active chrome tab -<script src="https://gist.github.com/angad19/a2737a773827ad3c0c489411b375be3b.js"></script></p>
 
