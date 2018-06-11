@@ -9,8 +9,7 @@ const { promisify } = require('util');
 
 module.exports = async function() {
 	try {
-		// Read posts.json
-		let posts = JSON.parse(await promisify(fs.readFile)('./posts.json', 'utf-8'));
+		let posts = [];
 
 		/**
 		 * Run plugins
@@ -24,7 +23,8 @@ module.exports = async function() {
 			posts = await require('./plugins/' + plugin)(posts, c);
 		}
 
-		await promisify(fs.writeFile)('posts.mod.json', JSON.stringify(posts, null, '\t'));
+		// Write posts to file
+		await promisify(fs.writeFile)('posts.json', JSON.stringify(posts, null, '\t'));
 	} catch(e) {
 		console.error(e);
 	}

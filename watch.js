@@ -30,5 +30,6 @@ function runBuild() {
 			console.log('Finished build');
 			reload();
 		})
+		.on('data', (data) => console.log(data))
 		.on('error', (e) => console.error(e));
 }
