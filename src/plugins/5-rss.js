@@ -18,12 +18,12 @@ const feed = new RSS({
 function RSSfeed(posts, c) {
 	return new Promise(async function (resolve, reject) {
 		try {
-			for(let i in posts) {
+			for(let post of posts) {
 				feed.item({
-					title: posts[i].title,
-					description: posts[i].content.slice(0, 50),
-					guid: posts[i].fdate.getTime(),
-					date: posts[i].date
+					title: post.title,
+					description: post.content.slice(0, 50),
+					guid: new Date(post.date).getTime(),
+					date: post.date
 				});
 			}
 

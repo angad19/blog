@@ -24,7 +24,7 @@ module.exports = async function() {
 			posts = await require('./plugins/' + plugins[i])(posts, c);
 		}
 
-		await promisify(fs.writeFile)
+		await promisify(fs.writeFile)('posts.json', JSON.stringify(posts, null, '\t'));
 	} catch(e) {
 		console.error(e);
 	}

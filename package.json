@@ -8,6 +8,7 @@
  "license": "MIT",
  "dependencies": {
   "ejs": "^2.6.1",
+  "front-matter": "^2.3.0",
   "less": "^3.0.4",
   "ncp": "^2.0.0",
   "rss": "^1.2.2",

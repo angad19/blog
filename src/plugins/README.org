@@ -3,6 +3,9 @@
 * clean
 	Clean public directory.
 
+* get-posts
+	Generate post objects from HTML files.
+
 * render-posts
 	Render static post pages.
 
