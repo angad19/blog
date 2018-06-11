@@ -20,11 +20,11 @@ module.exports = async function() {
 		plugins = plugins.filter(file => path.extname(file) === '.js');
 
 		// Run plugins
-		for(let i in plugins) {
-			posts = await require('./plugins/' + plugins[i])(posts, c);
+		for(let plugin of plugins) {
+			posts = await require('./plugins/' + plugin)(posts, c);
 		}
 
-		await promisify(fs.writeFile)('posts.json', JSON.stringify(posts, null, '\t'));
+		await promisify(fs.writeFile)('posts.mod.json', JSON.stringify(posts, null, '\t'));
 	} catch(e) {
 		console.error(e);
 	}
