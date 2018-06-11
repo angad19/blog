@@ -1,3 +1,7 @@
 #+TITLE: Angad's Blog
 
 http://angadsingh.me/blog
+
+* TODOS
+	- CLI
+	- WebUI
