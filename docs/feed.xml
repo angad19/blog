@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Angad Singh]]></title>
+        <description><![CDATA[Angad Singh]]></description>
+        <link>http://angadsingh.me/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Mon, 11 Jun 2018 13:57:05 GMT</lastBuildDate>
+        <atom:link href="http://angadsingh.me/feed.xml/" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Ln: A simple, extensible static site generator]]></title>
+            <description><![CDATA[
+<p>I've started building a lot more projects. I w]]></description>
+            <guid isPermaLink="false">1528714260000</guid>
+            <pubDate>Mon, 11 Jun 2018 10:51:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
