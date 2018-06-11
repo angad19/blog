@@ -1,56 +1,11 @@
 [
 	{
-		"title": "Post Two",
-		"date": "2018-06-25 00:45",
-		"fdate": "2018-06-24T19:15:00.000Z",
-		"pdate": "2018-06-25",
+		"title": "Ln: A simple, extensible static site generator",
+		"date": "2018-06-11 16:21",
+		"fdate": "2018-06-11T10:51:00.000Z",
+		"pdate": "2018-06-11",
 		"author": "Angad Singh",
-		"filename": "2018-06-25-post-two.html",
-		"content": "\n<h5>Post two</h3>\n\n<p><i>8:45PM</i> I'm kinda intoxicated. I'm not gonna lie. It's only 9PM on a Tuesday? What?</p>\n\n<p><i>9:15PM</i> Working in a cafe is hard.</p>\n"
-	},
-	{
-		"title": "Post one",
-		"date": "2018-06-24 00:45",
-		"fdate": "2018-06-23T19:15:00.000Z",
-		"pdate": "2018-06-24",
-		"author": "Angad Singh",
-		"filename": "2018-06-24-post-one.html",
-		"content": "\n<p><i>8:45PM</i> I'm kinda intoxicated. I'm not gonna lie. It's only 9PM on a Tuesday? What?</p>\n\n<p><i>9:15PM</i> Working in a cafe is hard.</p>\n"
-	},
-	{
-		"title": "Post one",
-		"date": "2018-06-24 00:45",
-		"fdate": "2018-06-23T19:15:00.000Z",
-		"pdate": "2018-06-24",
-		"author": "Angad Singh",
-		"filename": "2018-06-24-post-one.html",
-		"content": "\n<p><i>8:45PM</i> I'm kinda intoxicated. I'm not gonna lie. It's only 9PM on a Tuesday? What?</p>\n\n<p><i>9:15PM</i> Working in a cafe is hard.</p>\n"
-	},
-	{
-		"title": "Post Two",
-		"date": "2018-06-17 00:42",
-		"author": "Angad Singh",
-		"content": "Hey! This is post <i>two</i>.",
-		"fdate": "2018-06-16T19:12:00.000Z",
-		"pdate": "2018-06-17",
-		"filename": "2018-06-17-post-two.html"
-	},
-	{
-		"title": "Post One",
-		"date": "2018-06-16 00:42",
-		"author": "Angad Singh",
-		"content": "Hey! This is post <i>one</i>.",
-		"fdate": "2018-06-15T19:12:00.000Z",
-		"pdate": "2018-06-16",
-		"filename": "2018-06-16-post-one.html"
-	},
-	{
-		"title": "I like you",
-		"date": "2018-05-25 00:45",
-		"fdate": "2018-05-24T19:15:00.000Z",
-		"pdate": "2018-05-25",
-		"author": "Angad Singh",
-		"filename": "2018-05-25-i-like you.html",
-		"content": "\n<h5>Post two</h3>\n\n<p><i>8:45PM</i> I'm kinda intoxicated. I'm not gonna lie. It's only 9PM on a Tuesday? What?</p>\n\n<p><i>9:15PM</i> Working in a cafe is hard.</p>\n"
+		"filename": "2018-06-11-ln-static-gen.html",
+		"content": "\n<p>I've started building a lot more projects. I wanted to write about problems I ran into, tools I used and just general stuff. I've tried a lot of ways to blog, and almost all of them has some or the other problem which made them harder to use for me. <a href=\"https://jekyllrb.com\">Jekyll</a> felt overkill, I don't know React so <a href=\"https://gatsbyjs.com\">Gatsby</a> or anything React based was nto an option. I'm not great at Python, so most of the Python-based options were out too. I also wanted a nice weekend project to work on after my SSAT was over.</p>\n\n<p>Writing my own generator was fun. It wasn't very difficult, but challenging enough to keep me interested. I wrote Ln in JavaScript, because I'm know JavaScript well enough to write useable software.</p>\n\n<p><a href=\"https://github.com/angad19/ln\">Ln</a> is a simple and extensible static site generator. It is made up of three components - <code>posts.json</code>, plugins and <code>config.js</code>. <code>posts.json</code> is read and an array of post objects is created. An ln plugin is just a function that takes an array of post objects and the config as params and returns a promise which resolves with an array of posts. So, for example, you could build a plugin that reads all org files in a directory, generates post objects from them and adds them to the posts array. After <code>awaiting</code> all the plugins, the modified posts object is written to <code>posts.json</code>. <code>config.js</code> exports an object whose properties can be accessed by all plugins.</p>\n\n<p>You can then run the index script to run the build function which calls all the plugins.</p>\n\n<p><a href=\"https://github.com/angad19/ln\">Check out the project on Github!</a></p>\n"
 	}
 ]

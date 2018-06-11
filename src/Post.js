@@ -13,7 +13,7 @@ function Post(fm) {
 	this.fdate = new Date(this.date);
 	this.pdate = this.fdate.getFullYear() + '-' + zeroFill(this.fdate.getMonth() + 1, 2) + '-' + zeroFill(this.fdate.getDate(), 2);
 	this.author = fm.attributes.hasOwnProperty('author') ? fm.attributes.author : 'Angad Singh';
-	this.filename = this.pdate + '-' + this.title.toLowerCase().replace(' ', '-') + '.html';
+	this.filename = fm.attributes.hasOwnProperty('url') ? this.pdate + '-' + fm.attributes.url + '.html' : this.pdate + '-' + this.title.toLowerCase().replace(' ', '-') + '.html';
 	this.content = fm.body;
 }
 

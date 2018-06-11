@@ -13,6 +13,8 @@ const Post = require('../Post');
 function getPosts(posts, c) {
 	return new Promise(async function (resolve, reject) {
 		try {
+			posts = [];
+			
 			const pList = await promisify(fs.readdir)(c.posts);
 			for(let pPath of pList) {
 				// Read file
