@@ -12,7 +12,11 @@ const path = require('path');
 function renderHome(posts, c) {
 	return new Promise(async function (resolve, reject) {
 		try {
-			const html = await promisify(ejs.renderFile)(path.join(c.templates, 'home.ejs'), { title: 'Angad Singh\'s Blog', posts});
+			let displayedPosts = posts.filter(post => {
+				return post.hasOwnProperty('display') ? post.display : true;
+			});
+
+			const html = await promisify(ejs.renderFile)(path.join(c.templates, 'home.ejs'), { title: 'Angad Singh\'s Blog', posts: displayedPosts});
 			await promisify(fs.writeFile)(path.join(c.build, 'index.html'), html);
 
 			console.log('Rendered homepage');

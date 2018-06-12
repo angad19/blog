@@ -4,8 +4,17 @@
         <description><![CDATA[Angad Singh]]></description>
         <link>http://angadsingh.me/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 11 Jun 2018 21:49:57 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 12 Jun 2018 11:01:23 GMT</lastBuildDate>
         <atom:link href="http://angadsingh.me/feed.xml/" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Batch rename files with Dired]]></title>
+            <description><![CDATA[
+<p>You can batch rename files with Dired.</p>
+
+<p]]></description>
+            <guid isPermaLink="false">1528800900000</guid>
+            <pubDate>Tue, 12 Jun 2018 10:55:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Nodejs file watcher]]></title>
             <description><![CDATA[

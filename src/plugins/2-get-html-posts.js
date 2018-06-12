@@ -5,17 +5,19 @@ const front = require('front-matter');
 const Post = require('../Post');
 
 /**
- * getPosts
+ * getHTMLPosts
  * Generate post objects from HTML files.
  * @param {array} posts An array of post objects.
  * @param {object} c User config
  */
-function getPosts(posts, c) {
+function getHTMLPosts(posts, c) {
 	return new Promise(async function (resolve, reject) {
 		try {
-			posts = [];
-			
-			const pList = await promisify(fs.readdir)(c.posts);
+			let pList = await promisify(fs.readdir)(c.posts);
+			pList = pList.filter(p => {
+				return path.extname(p) == '.html' || path.extname(p) == '.html';
+			})
+
 			for(let pPath of pList) {
 				// Read file
 				const raw = await promisify(fs.readFile)(path.join(c.posts, pPath), 'utf-8');
@@ -29,10 +31,10 @@ function getPosts(posts, c) {
 			// Sort posts
 			posts = posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 			
-			console.log('Retrieved posts');
+			console.log('Retrieved HTML posts');
 			resolve(posts);
 		} catch(e) { reject(e) }
 	});
 }
 
-module.exports = getPosts;
+module.exports = getHTMLPosts;
