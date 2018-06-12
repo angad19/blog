@@ -9,10 +9,9 @@ const path = require('path');
  * @param {array} posts An array of post objects.
  * @param {object} c User config
  */
-function renderPosts(posts, c) {
-	return new Promise(async function (resolve, reject) {
-		try {
-			await promisify(fs.mkdir)(path.join(c.build, 'posts'));
+async function renderPosts(posts, c) {
+	try {
+		await promisify(fs.mkdir)(path.join(c.build, 'posts'));
 			
 			for(let post of posts) {
 				const html = await promisify(ejs.renderFile)(path.join(c.templates, 'post.ejs'), {post: post})
@@ -20,9 +19,8 @@ function renderPosts(posts, c) {
 			}
 
 			console.log('Rendered posts');
-			resolve(posts);
-		} catch(e) { reject(e) }
-	});
+			return posts;
+	} catch(e) { return Promise.reject(e); }
 }
 
 module.exports = renderPosts;
