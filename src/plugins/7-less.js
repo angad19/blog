@@ -9,17 +9,15 @@ const path = require('path');
  * @param {array} posts An array of post objects.
  * @param {object} c User config
  */
-function lessC(posts, c) {
-	return new Promise(async function (resolve, reject) {
-		try {
-			const raw = await promisify(fs.readFile)(path.join(c.less, 'style.less'), 'utf-8');
-			const css = await less.render(raw);
-			await promisify(fs.writeFile)(path.join(c.build, 'assets/style.css'), css.css);
-
-			console.log('Compiled LESS stylesheets');
-			resolve(posts);
-		} catch(e) { reject(e) }
-	});
+async function lessC(posts, c) {
+	try {
+		const raw = await promisify(fs.readFile)(path.join(c.less, 'style.less'), 'utf-8');
+		const css = await less.render(raw);
+		await promisify(fs.writeFile)(path.join(c.build, 'assets/style.css'), css.css);
+		
+		console.log('Compiled LESS stylesheets');
+		return posts;
+	} catch(e) { return Promise.reject(e) }
 }
 
 module.exports = lessC;
