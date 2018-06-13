@@ -1,5 +1,25 @@
 [
 	{
+		"title": "Quick Hack: Make Emacs feel more like Sublime Text",
+		"date": "2018-06-14 02:15",
+		"fdate": "2018-06-13T20:45:00.000Z",
+		"pdate": "2018-06-14",
+		"author": "Angad Singh",
+		"filename": "2018-06-14-emacs-feel-sublime-cursor.html",
+		"content": "\n<p>I used Sublime for a small project at work and it felt oddly satisfying. I obviously missed my Emacs a lot but when I switched back to Emacs, I felt like I was missing something. Sublime just felt more ...comfortable. So I tried to find out, and after hours of customizing both editors, I finally found out what I was missing, THE CURSOR. Sublime's cursor is thin, but not very thin, it's absolutely perfect.</p>\n\n<p>To get a sublime-like cursor in Emacs, put this line somewhere in your <code>.emacs</code> -</p>\n\n<script src=\"https://gist.github.com/angad19/07059748289f3ffcb9049ee93bbe7faa.js\"></script>\n",
+		"display": true
+	},
+	{
+		"title": "",
+		"date": "2018-06-14 02:04",
+		"fdate": "2018-06-13T20:34:00.000Z",
+		"pdate": "2018-06-14",
+		"author": "Angad Singh",
+		"filename": "2018-06-14-.html",
+		"content": "",
+		"display": true
+	},
+	{
 		"title": "Batch rename files with Dired",
 		"date": "2018-06-12 16:25",
 		"fdate": "2018-06-12T10:55:00.000Z",

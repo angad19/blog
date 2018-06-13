@@ -4,8 +4,20 @@
         <description><![CDATA[Angad Singh]]></description>
         <link>http://angadsingh.me/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 13 Jun 2018 20:23:04 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 13 Jun 2018 21:09:38 GMT</lastBuildDate>
         <atom:link href="http://angadsingh.me/feed.xml/" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Quick Hack: Make Emacs feel more like Sublime Text]]></title>
+            <description><![CDATA[
+<p>I used Sublime for a small project at work and]]></description>
+            <guid isPermaLink="false">1528922700000</guid>
+            <pubDate>Wed, 13 Jun 2018 20:45:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <guid isPermaLink="false">1528922040000</guid>
+            <pubDate>Wed, 13 Jun 2018 20:34:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Batch rename files with Dired]]></title>
             <description><![CDATA[
