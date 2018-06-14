@@ -45,3 +45,6 @@ code {
 .gist-meta {
   display: none;
 }
+ul {
+  margin-left: 30px;
+}

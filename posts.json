@@ -1,5 +1,15 @@
 [
 	{
+		"title": "Writing a CMS for this blog",
+		"date": "2018-06-14 2:49",
+		"fdate": "2018-06-13T21:19:00.000Z",
+		"pdate": "2018-06-14",
+		"author": "Angad Singh",
+		"filename": "2018-06-14-blog-cms-webui.html",
+		"content": "\n<p><i>2:49AM</i></p>\n\n<p>When I started writing this blog, I wanted to edit it in a browser. But I ended up using HTML files (since I could edit them in Emacs). I'm going to try to do that today.</p>\n\n<p>I'm thinking of writing an Express API which reads and writes to HTML files in the posts folder. And I could authenticate the requests with a token or something. This doesn't really need authentication, since I only plan on running it on my machine (where the posts are), but I'll still add it in.</p>\n\n<p>These are all routes I think I'll need -\n\t<table class=\"table table-borderless\">\n\t\t<tr>\n\t\t\t<td><code>/api/add</code></td>\n\t\t\t<td>Add a post</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><code>/api/delete/:postId</code></td>\n\t\t\t<td>Delete a post</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><code>/api/edit/:postId</code></td>\n\t\t\t<td>Edit a post</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><code>/api/append/:postId</code></td>\n\t\t\t<td>Append to a post</td>\n\t\t</tr>\n\t</table>\n</p>\n\n<p>I'm using EJS and LESS for this project and the express-generator package to bootstrap this project, it still uses <code>var</code> but I can avoid writing a lot of useless boilerplate code. Besides, I can always replace the var declarations with const declarations in Emacs with <code>expand-region</code> and <code>iedit</code> :). All i need to do is rename the <code>users.js</code> file to <code>api.js</code> and change where it's used in <code>app.js</code></p>\n\n<p>Tbvh kinda tired. I'm gonna pick this up tomorrow, good night!</p>\n",
+		"display": true
+	},
+	{
 		"title": "Quick Hack: Make Emacs feel more like Sublime Text",
 		"date": "2018-06-14 02:15",
 		"fdate": "2018-06-13T20:45:00.000Z",
@@ -7,16 +17,6 @@
 		"author": "Angad Singh",
 		"filename": "2018-06-14-emacs-feel-sublime-cursor.html",
 		"content": "\n<p>I used Sublime for a small project at work and it felt oddly satisfying. I obviously missed my Emacs a lot but when I switched back to Emacs, I felt like I was missing something. Sublime just felt more ...comfortable. So I tried to find out, and after hours of customizing both editors, I finally found out what I was missing, THE CURSOR. Sublime's cursor is thin, but not very thin, it's absolutely perfect.</p>\n\n<p>To get a sublime-like cursor in Emacs, put this line somewhere in your <code>.emacs</code> -</p>\n\n<script src=\"https://gist.github.com/angad19/07059748289f3ffcb9049ee93bbe7faa.js\"></script>\n",
-		"display": true
-	},
-	{
-		"title": "",
-		"date": "2018-06-14 02:04",
-		"fdate": "2018-06-13T20:34:00.000Z",
-		"pdate": "2018-06-14",
-		"author": "Angad Singh",
-		"filename": "2018-06-14-.html",
-		"content": "",
 		"display": true
 	},
 	{
