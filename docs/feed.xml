@@ -4,16 +4,14 @@
         <description><![CDATA[Angad Singh]]></description>
         <link>http://angadsingh.me/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 13 Jun 2018 21:48:51 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 14 Jun 2018 20:22:52 GMT</lastBuildDate>
         <atom:link href="http://angadsingh.me/feed.xml/" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Writing a CMS for this blog]]></title>
+            <title><![CDATA[A few weeks with the Oneplus 6]]></title>
             <description><![CDATA[
-<p><i>2:49AM</i></p>
-
-<p>When I started writing t]]></description>
-            <guid isPermaLink="false">1528924740000</guid>
-            <pubDate>Wed, 13 Jun 2018 21:19:00 GMT</pubDate>
+<p>My phone (a <a href="https://gadgets.ndtv.com/]]></description>
+            <guid isPermaLink="false">1529003880000</guid>
+            <pubDate>Thu, 14 Jun 2018 19:18:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Quick Hack: Make Emacs feel more like Sublime Text]]></title>
