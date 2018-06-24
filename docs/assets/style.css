@@ -6,7 +6,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', system-ui;
+  font-family: 'Fira Sans', system-ui;
 }
 .main {
   max-width: 620px;
