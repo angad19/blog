@@ -41,6 +41,8 @@
 
 <p><script src="https://gist.github.com/angad19/28f6024aef43710e71094320afbec86c.js"></script></p>
 
+<p>If you're hosting on Github pages, you'll also want to change the homepage field in your package.json (read about it in the build task's output).</p>
+
 <p>I'll start by adding a header component, followed by a todo input component.</p>
 
 <p>While trying to get submit on enter to work, I came across a weird problem. I passed a function to the <code>input</code> element which printed out <code>e.keyCode</code> and I would always get 0. I googled around and found that I had to use <code>e.which</code> instead. Might be helpful for y'all.</p>
