@@ -3,5 +3,4 @@
 http://angadsingh.me/blog
 
 * TODOS
-	- CLI
-	- WebUI
+  - Add projects and photography section
