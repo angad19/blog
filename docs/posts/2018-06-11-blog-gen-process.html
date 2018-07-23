@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-	
-	
-	
-	<head>
+  
+  
+  
+  <head>
 	<title>How I generate my blog</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +12,14 @@
 	<link href="../assets/style.css" rel="stylesheet"/>
 </head>
 
-	<body>
-		<div class="container-fluid main">
-			<div class="full-post">
-				<a href="../" class="back">&#8617; back</a>
-				<h1>How I generate my blog</h1>
-				<div class="info">Angad Singh | 2018-06-11 16:21</div>
-				<div class="content">
-					
+  <body>
+    <div class="container-fluid main">
+      <div class="full-post">
+        <a href="../" class="back">&#8617; back</a>
+        <h1>How I generate my blog</h1>
+        <div class="info">Angad Singh | 2018-06-11 16:21</div>
+        <div class="content">
+          
 <p>I've started building a lot more projects. I wanted to write about problems I ran into, tools I used and just general stuff. I've tried a lot of ways to blog, and pretty much none of them fit into my workflow. <a href="https://jekyllrb.com">Jekyll</a> felt overkill, I don't know React so <a href="https://gatsbyjs.com">Gatsby</a> or anything React based was not an option. I'm not great at Python, so most of the Python-based options were out too. I also wanted a nice weekend project to work on after my SSAT was over.</p>
 
 <p>Writing my own generator was fun. It wasn't very difficult, but challenging enough to keep me interested. I wrote it in JavaScript, because I know JavaScript well enough to write usable software.</p>
@@ -27,18 +27,18 @@
 <p>My generator basically just reads a directory of JavaScipt plugin files and executes them. A plugin file is just a file which exports a function which takes in an array of post objects and the config object as params and returns a promise that resolves with an array of post objects. The build script runs in <code>O(n)</code> and the plugins are executed one after another.</p>
 
 <p>I wrote 6 plugins -
-	<h5>clean</h5>
-	<p>Delets the public directory, creates a new one and copies the assets folder from the source directory into the build directory</p>
-	<h5>get-posts</h5>
-	<p>Reads posts folder, generates post objects from HTML files and pushes them to the posts array</p>
-	<h5>render-posts</h5>
-	<p>Renders an EJS template for each post and places it in the build directory.</p>
-	<h5>render-home</h5>
-	<p>Renders the home EJS template.</p>
-	<h5>rss</h5>
-	<p>Generates an RSS feed using the posts array using the <a href="https://github.com/dylang/node-rss">node-rss</a> package and writes it to <code>build/feed.xml</code> .</p>
-	<h5>less</h5>
-	<p>Compiles LESS stylesheets into CSS and writes to a <code>style.css</code> file in the build directory.</p></p>
+  <h5>clean</h5>
+  <p>Delets the public directory, creates a new one and copies the assets folder from the source directory into the build directory</p>
+  <h5>get-posts</h5>
+  <p>Reads posts folder, generates post objects from HTML files and pushes them to the posts array</p>
+  <h5>render-posts</h5>
+  <p>Renders an EJS template for each post and places it in the build directory.</p>
+  <h5>render-home</h5>
+  <p>Renders the home EJS template.</p>
+  <h5>rss</h5>
+  <p>Generates an RSS feed using the posts array using the <a href="https://github.com/dylang/node-rss">node-rss</a> package and writes it to <code>build/feed.xml</code> .</p>
+  <h5>less</h5>
+  <p>Compiles LESS stylesheets into CSS and writes to a <code>style.css</code> file in the build directory.</p></p>
 
 <p>I'm pretty happy with this setup. I can add and remove stuff pretty easily and I can edit the posts in Emacs in HTML mode. I'll write about any problems that come up.</p>
 
@@ -46,16 +46,16 @@
 
 <p><a href="https://github.com/angad19/blog">Github</a></p>
 
-				</div>
-			</div>
-			<footer style="margin-left: 20px;">
-	<a href="https://github.com/angad19" class="social" style="margin-left: 0;">github</a>
-	<a href="https://open.spotify.com/user/angad5" class="social">spotify</a>
-	<a href="mailto:angadsingh567890@gmail.com" class="social">mail</a>
-	<a href="../feed.xml">RSS</a>
-	<p>&copy; Angad Singh 2018</p>
+        </div>
+      </div>
+      <footer>
+  <a href="https://github.com/angad19" class="social" style="margin-left: 0;">github</a>
+  <a href="https://open.spotify.com/user/angad5" class="social">spotify</a>
+  <a href="mailto:angadsingh567890@gmail.com" class="social">mail</a>
+  <a href="../feed.xml">RSS</a>
+  <p>&copy; Angad Singh 2018</p>
 </footer>
 
-		</div>
-	</body>
+    </div>
+  </body>
 </html>

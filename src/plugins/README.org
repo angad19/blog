@@ -1,19 +1,19 @@
 #+TITLE: Plugins
 
 * clean
-	Clean public directory.
+  Clean public directory.
 
 * get-posts
-	Generate post objects from HTML files.
+  Generate post objects from HTML files.
 
 * render-posts
-	Render static post pages.
+  Render static post pages.
 
 * render-home
-	Render homepage.
+  Render homepage.
 
 * rss
-	Generate RSS feed
+  Generate RSS feed
 
 * less
-	Compile LESS stylesheets
+  Compile LESS stylesheets

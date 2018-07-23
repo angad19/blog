@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-	
-	
-	
-	<head>
+  
+  
+  
+  <head>
 	<title>Nodejs file watcher</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +12,14 @@
 	<link href="../assets/style.css" rel="stylesheet"/>
 </head>
 
-	<body>
-		<div class="container-fluid main">
-			<div class="full-post">
-				<a href="../" class="back">&#8617; back</a>
-				<h1>Nodejs file watcher</h1>
-				<div class="info">Angad Singh | 2018-06-12 01:43</div>
-				<div class="content">
-					
+  <body>
+    <div class="container-fluid main">
+      <div class="full-post">
+        <a href="../" class="back">&#8617; back</a>
+        <h1>Nodejs file watcher</h1>
+        <div class="info">Angad Singh | 2018-06-12 01:43</div>
+        <div class="content">
+          
 <p>To see changes in the browser for this blog, I need to run the build script and refresh the browser manually. This can get tedious, so I decided to automate it.</p>
 
 <p>This is pretty easy to do in Node, because Node was built for realtime things like this. The <code>fs</code> module has a <code>watch</code> function which can watch directories and do stuff when files change. I can just run the build script using <code>child_process.spawn</code>. Now I just need to find a way to reload the browser.</p>
@@ -35,16 +35,16 @@
 <p>Files beginning with <code>.#</code> are backup files created by Emacs, so we can ignore them. </p>
 <p>The reload is kinda jerky but I don't mind it. I won't be looking at the browser constantly.</p>
 
-				</div>
-			</div>
-			<footer style="margin-left: 20px;">
-	<a href="https://github.com/angad19" class="social" style="margin-left: 0;">github</a>
-	<a href="https://open.spotify.com/user/angad5" class="social">spotify</a>
-	<a href="mailto:angadsingh567890@gmail.com" class="social">mail</a>
-	<a href="../feed.xml">RSS</a>
-	<p>&copy; Angad Singh 2018</p>
+        </div>
+      </div>
+      <footer>
+  <a href="https://github.com/angad19" class="social" style="margin-left: 0;">github</a>
+  <a href="https://open.spotify.com/user/angad5" class="social">spotify</a>
+  <a href="mailto:angadsingh567890@gmail.com" class="social">mail</a>
+  <a href="../feed.xml">RSS</a>
+  <p>&copy; Angad Singh 2018</p>
 </footer>
 
-		</div>
-	</body>
+    </div>
+  </body>
 </html>

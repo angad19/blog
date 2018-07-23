@@ -10,17 +10,17 @@ const path = require('path');
  * @param {object} c User config
  */
 async function renderHome(posts, c) {
-	try {
-		let displayedPosts = posts.filter(post => {
-			return post.hasOwnProperty('display') ? post.display : true;
-		});
-		
-		const html = await promisify(ejs.renderFile)(path.join(c.templates, 'home.ejs'), { title: 'Angad Singh\'s Blog', posts: displayedPosts});
-		await promisify(fs.writeFile)(path.join(c.build, 'index.html'), html);
-		
-		console.log('Rendered homepage');
-		return posts;
-	} catch(e) { return Promise.reject(e); }
+  try {
+    let displayedPosts = posts.filter(post => {
+      return post.hasOwnProperty('display') ? post.display : true;
+    });
+    
+    const html = await promisify(ejs.renderFile)(path.join(c.templates, 'home.ejs'), { title: 'Angad Singh\'s Blog', posts: displayedPosts});
+    await promisify(fs.writeFile)(path.join(c.build, 'index.html'), html);
+    
+    console.log('Rendered homepage');
+    return posts;
+  } catch(e) { return Promise.reject(e); }
 }
 
 module.exports = renderHome;

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-	<% let stylesheet = '../assets/style.css'; %>
-	<% let feed = '../feed.xml'; %>
-	<% let title = post.title; %>
-	<% include partials/head %>
-	<body>
-		<div class="container-fluid main">
-			<div class="full-post">
-				<a href="../" class="back">&#8617; back</a>
-				<h1><%= post.title %></h1>
-				<div class="info"><%= post.author %> | <%= post.date %></div>
-				<div class="content">
-					<%- post.content %>
-				</div>
-			</div>
-			<% include partials/footer %>
-		</div>
-	</body>
+  <% let stylesheet = '../assets/style.css'; %>
+  <% let feed = '../feed.xml'; %>
+  <% let title = post.title; %>
+  <% include partials/head %>
+  <body>
+    <div class="container-fluid main">
+      <div class="full-post">
+        <a href="../" class="back">&#8617; back</a>
+        <h1><%= post.title %></h1>
+        <div class="info"><%= post.author %> | <%= post.date %></div>
+        <div class="content">
+          <%- post.content %>
+        </div>
+      </div>
+      <% include partials/footer %>
+    </div>
+  </body>
 </html>
