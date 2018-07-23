@@ -4,12 +4,25 @@
         <description><![CDATA[Angad Singh]]></description>
         <link>http://angadsingh.me/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 23 Jul 2018 19:33:36 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Jul 2018 19:40:11 GMT</lastBuildDate>
         <atom:link href="http://angadsingh.me/feed.xml/" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Writing an RSS Reader: Part 1]]></title>
             <description><![CDATA[
-<p>I'm writing an RSS Reader. Why you may ask? Go]]></description>
+<p>I'm writing an RSS Reader. Why you may ask? Good question. Because I'm bored, and writing code is fun.</p>
+
+<p>I'm going to use Express and React for this project, again because using React is fun and I'm familiar with Express.</p>
+
+<h3>Architecture</h3>
+
+<p>Now let's talk about how the app will actually work. I'm not going to go into user auth or anything like that. This will be a single user application, which probably no one other than me will ever use.</p>
+
+<p>I'm going to have one API for all the frontends I might make. Other than the React webapp, I'm also thinking of doing a React Native mobile app. For keeping the list of feeds synced between multiple devices, I'll use a Dropbox file. I was going to use Google Drive but OAuth fucked my brain. The Dropbox SDK is super simple to use, they just give you an Access Token and you can get on with your life. I played around with it a little today, and it seems easy enough, I didn't have much time though and could only get listing files to work.</p>
+
+<p>I'll keep y'all posted about the progess of this project and if I run into any problems. I'm gonna go sleep now, I have a long ass day. I'm really fucking excited about <a href="https://byteclub.in/byte_it/home">Byte.IT</a> tomorrow, it seems like a really nice event. Had one of the most innovative cryptic hunts on the tech circuit. I like how they took the best parts of CTFs and cryptic hunts and merged them together. I'll probably talk about the creative event too tomorrow.</p>
+
+<p><b>Edit:</b> Wrote this whole post in Vim, kinda nice. I left Emacs for VS Code. Mostly because I do a lot of JavaScript now.</p>
+]]></description>
             <guid isPermaLink="false">1532372100000</guid>
             <pubDate>Mon, 23 Jul 2018 18:55:00 GMT</pubDate>
         </item>
@@ -17,21 +30,77 @@
             <title><![CDATA[Building a todo app in React]]></title>
             <description><![CDATA[
 <p>
-  <a href="http://angadsingh.me/react-todo/">]]></description>
+  <a href="http://angadsingh.me/react-todo/">Demo</a><br/>
+  <a href="https://github.com/angad19/react-todo/">Code</a>
+</p>
+
+<p>React has always been on my list of things to master (right after shitposting and patrish music selection lmao). Today I'll try to build the de facto first react project, a todo list :)</p>
+
+<p><i>Note: I hate writing, please bear with me if this post isn't very long.</i></p>
+
+<h3>Starting Dev</h3>
+<p>Before starting I'm making a small mockup in Sketch, so that I know exactly what I'm doing. Here's what I came up with - </p>
+<p style="text-align: center;">
+  <img alt="" src="../assets/images/mobile-todo-app.png"/>
+</p>
+
+<p>Excuse my terrible design skills. I'm going to bootstrap the project using <code>create-react-app</code> because I don't know webpack well enough to setup my own config. I usually clean up the stuff that <code>create-react-app</code> adds, I'm going to delete <code>logo.svg</code>, <code>App.test.js</code> (my code is my test *angery*) and <code>registerServiceWorker.js</code>, also remove imports/referrences to these files in other files.</p>
+
+<p><b>Tip:</b> If you want to host your build on Github Pages, you'll need to rename the <code>build</code> directory to <code>docs</code>. You could do that manually or setup a <code>postbuild</code> task in your <code>package.json</code>. The <code>postbuild</code> task is automatically run by yarn or npm after the build task. Add the postbuild task to your package.json like this - </p>
+
+<p><script src="https://gist.github.com/angad19/28f6024aef43710e71094320afbec86c.js"></script></p>
+
+<p>If you're hosting on Github pages, you'll also want to change the homepage field in your package.json (read about it in the build task's output).</p>
+
+<p>I'll start by adding a header component, followed by a todo input component.</p>
+
+<p>While trying to get submit on enter to work, I came across a weird problem. I passed a function to the <code>input</code> element which printed out <code>e.keyCode</code> and I would always get 0. I googled around and found that I had to use <code>e.which</code> instead. Might be helpful for y'all.</p>
+
+<p>Okay, I have basic functionality working, now I just need to display the todos and work on deletions (which I'm guessing is the hardest part?). Let's talk a little about the app. The header and todo input components are both stateless and functional, only the App component has state. I'm passing down functions for <code>onKeyPress</code> and <code>onChange</code> via props (Tip: use arrow functions to define methods in classes, you don't have to bind them to <code>this</code> that way). I'm using the value attribute of the input element to empty it when the user presses enter (pass down state, set on keyPress). The <code>onKeyPress</code> function just pushes the todoItem to the todos array in state and empties the todo input element.</p>
+
+<p>Displaying todos works. All I had to do was have one todo list component and one todo component, then map over an array in the props in the todo list component and render a todo component for each todo in the todos array.</p>
+
+
+<p>Finished. Implementing deletion was a lot easier than I expected. All I had to was splice the array at the key.</p>
+]]></description>
             <guid isPermaLink="false">1532178540000</guid>
             <pubDate>Sat, 21 Jul 2018 13:09:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[A few weeks with the Oneplus 6]]></title>
             <description><![CDATA[
-<p>My phone (a <a href="https://gadgets.ndtv.com/]]></description>
+<p>My phone (a <a href="https://gadgets.ndtv.com/samsung-galaxy-a5-2107">Samsung Galaxy A5</a>) was due for an upgrade. I wanted something that wasn't very expensive, snappy, had a good camera, a workday's battery life and a decent ammount of storage. I decided to go with the <a href="https:/oneplus.in/6">Oneplus 6</a>. I've had some experience with Oneplus phones before, I had the <a href="https://www.oneplus.in/5">Oneplus 5</a> before it suffered a tragic death on the road outside my school (RIP).</p>
+
+<p>My Oneplus 5 could handle anything I threw at it, was a joy to use and lasted hours. That's exactly what I expected from it's successor, a fast, beautiful phone which felt amazing. I ordered the base model in Mirror Black, mostly because that was all I could afford, but also becasue I didn't feel I'd need anything more.</p>
+
+<p>The Mirror Black variant is very slippery and collects a lot of fingerprints, fortunately Oneplus sends you a case in the box. The phone looks and feels extremely beautiful. The design is pretty consistent with the OP5 but the OP6 has a glass back. The glass back feels a lot smoother in the hand, and personally I prefer it over the OP5's metal back.</p>
+
+<p>The camera is amazing. It takes great photos. I'm not gonna talk about a lot about technical details of the dual lens setup, but portrait mode is stil shit. Photos without portrait mode look amazing. It does a lot better than the OP5 in low-light situations. I still wish they would've done what LG did with their dual lens setup (main shooter + wide angle), but it's okay I don't take a lot of photos with my phone anyway.</p>
+
+<p>Perfomance-wise, the OP6 is a beast. It is the definition of a fast flagship. The software optimisations make it feel even smoother.</p>
+
+<p>While we're talking about software, I'd like to mention how great OxygenOS is. It's very close to stock Android but has all the little thing I wish stock Android had, like a system-wide dark mode. I also really like how Oneplus dealt with the notch, the ability to control it's behavior from app-to-app and the ability to completely disable it are great. As a open hater of this trend, I can tolerate the OP6's notch.</p>
+
+<p>The fingerprint scanner is fast and you can get in and out of the phone fairly quickly. I disabled face unlock mostly because of how unsecure it is (pfft), also because sometimes I open my phone just to glance at the time and I wouldn't want to unlock my phone when I do that. I did run into some problems where the phone wouldn't unlock if I only touched the fingerprint scanner, I'd have to press the power button first, but those were pretty rare and I haven't noticed any after the latest sofware update.</p>
+
+<p>Oneplus doesn't have great service in the States. But here in Delhi, there are quite a few official service centres, and their repair charges are a lot more reasonable than most other companies.</p>
+
+<p>I saved the best for last! The edge-to-edge display looks absolutely stunning. I've always liked AMOLED displays because of how good they are in the dark, but this one is on another level. The panel is 1080p, but I've never noticed it. Even when I compared it to a Galaxy S9, I couldn't see a huge difference in sharpness. In the Youtube app, you can pinch out to fill the whole screen with the video, this mode does crop some of the video but it's very immersive and I sometimes prefer it over the standard view with letterboxing.</p>
+
+<p>Overall, the OP6 is a great phone. Fast, beautiful, practical and affordable, exactly what I expected from Oneplus. It does have a few rough edges. Overall, I'd give it a 9/10. I wish Oneplus made a cheaper phone, one that wasn't as fast or beautiful, but still did the job gracefully. Fresh Oneplus releases are still pretty uncommon among average Indians, most people can only afford to spend 10 to 15,000rs (about 200$) on their phones and even though Oneplus offers amazing value, their phones are still out of reach for many Indians.</p>
+]]></description>
             <guid isPermaLink="false">1529003880000</guid>
             <pubDate>Thu, 14 Jun 2018 19:18:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Quick Hack: Make Emacs feel more like Sublime Text]]></title>
             <description><![CDATA[
-<p>I used Sublime for a small project at work and]]></description>
+<p>I used Sublime for a small project at work and it felt oddly satisfying. I obviously missed my Emacs a lot but when I switched back to Emacs, I felt like I was missing something. Sublime just felt more ...comfortable. So I tried to find out, and after hours of customizing both editors, I finally found out what I was missing, THE CURSOR. Sublime's cursor is thin, but not very thin, it's absolutely perfect.</p>
+
+<p>To get a sublime-like cursor in Emacs, put this line somewhere in your <code>.emacs</code> -</p>
+
+<script src="https://gist.github.com/angad19/07059748289f3ffcb9049ee93bbe7faa.js"></script>
+]]></description>
             <guid isPermaLink="false">1528922700000</guid>
             <pubDate>Wed, 13 Jun 2018 20:45:00 GMT</pubDate>
         </item>
@@ -40,21 +109,63 @@
             <description><![CDATA[
 <p>You can batch rename files with Dired.</p>
 
-<p]]></description>
+<p>Open a Dired buffer (<code>C-x d</code>) with the sirectory in which you want to batch rename files. Run <code>dired-toggle-read-only</code> (bound to <code>C-c C-q</code> in dired-mode). Edit the buffer and <code>C-c C-c</code> to save, <code>C-c C-k</code> to abort.</p>
+
+<p>Yet another reason why Emacs is awesome!</p>
+]]></description>
             <guid isPermaLink="false">1528800900000</guid>
             <pubDate>Tue, 12 Jun 2018 10:55:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Nodejs file watcher]]></title>
             <description><![CDATA[
-<p>To see changes in the browser for this blog, I]]></description>
+<p>To see changes in the browser for this blog, I need to run the build script and refresh the browser manually. This can get tedious, so I decided to automate it.</p>
+
+<p>This is pretty easy to do in Node, because Node was built for realtime things like this. The <code>fs</code> module has a <code>watch</code> function which can watch directories and do stuff when files change. I can just run the build script using <code>child_process.spawn</code>. Now I just need to find a way to reload the browser.</p>
+
+<p>The easiest way I can think of doing that is with applescript. This snippet reloads the active chrome tab -<script src="https://gist.github.com/angad19/a2737a773827ad3c0c489411b375be3b.js"></script></p>
+
+<p>Great! Now we can just run the <code>osascript -e</code> command to run this snippet.<script src="https://gist.github.com/angad19/885226238eea218ee06135d9cc542993.js"></script></p>
+
+<p>All we have to do now is setup <code>fs.watch</code> to watch our directories. I decided to use <a href="https://github.com/paulmillr/chokidar">chokidar</a> to watch the files since it's kinda hard to watch subdirectories with <code>fs.watch</code>.</p>
+
+<p>Here's the finished script - <script src="https://gist.github.com/angad19/96b8c2a987d0698be6fce3d3cc26093d.js"></script></p>
+
+<p>Files beginning with <code>.#</code> are backup files created by Emacs, so we can ignore them. </p>
+<p>The reload is kinda jerky but I don't mind it. I won't be looking at the browser constantly.</p>
+]]></description>
             <guid isPermaLink="false">1528747980000</guid>
             <pubDate>Mon, 11 Jun 2018 20:13:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[How I generate my blog]]></title>
             <description><![CDATA[
-<p>I've started building a lot more projects. I w]]></description>
+<p>I've started building a lot more projects. I wanted to write about problems I ran into, tools I used and just general stuff. I've tried a lot of ways to blog, and pretty much none of them fit into my workflow. <a href="https://jekyllrb.com">Jekyll</a> felt overkill, I don't know React so <a href="https://gatsbyjs.com">Gatsby</a> or anything React based was not an option. I'm not great at Python, so most of the Python-based options were out too. I also wanted a nice weekend project to work on after my SSAT was over.</p>
+
+<p>Writing my own generator was fun. It wasn't very difficult, but challenging enough to keep me interested. I wrote it in JavaScript, because I know JavaScript well enough to write usable software.</p>
+
+<p>My generator basically just reads a directory of JavaScipt plugin files and executes them. A plugin file is just a file which exports a function which takes in an array of post objects and the config object as params and returns a promise that resolves with an array of post objects. The build script runs in <code>O(n)</code> and the plugins are executed one after another.</p>
+
+<p>I wrote 6 plugins -
+  <h5>clean</h5>
+  <p>Delets the public directory, creates a new one and copies the assets folder from the source directory into the build directory</p>
+  <h5>get-posts</h5>
+  <p>Reads posts folder, generates post objects from HTML files and pushes them to the posts array</p>
+  <h5>render-posts</h5>
+  <p>Renders an EJS template for each post and places it in the build directory.</p>
+  <h5>render-home</h5>
+  <p>Renders the home EJS template.</p>
+  <h5>rss</h5>
+  <p>Generates an RSS feed using the posts array using the <a href="https://github.com/dylang/node-rss">node-rss</a> package and writes it to <code>build/feed.xml</code> .</p>
+  <h5>less</h5>
+  <p>Compiles LESS stylesheets into CSS and writes to a <code>style.css</code> file in the build directory.</p></p>
+
+<p>I'm pretty happy with this setup. I can add and remove stuff pretty easily and I can edit the posts in Emacs in HTML mode. I'll write about any problems that come up.</p>
+
+<p><b>Update:</b> I removed the part where the script writes to <code>posts.json</code>. Now the script only works with HTML fiels.</p>
+
+<p><a href="https://github.com/angad19/blog">Github</a></p>
+]]></description>
             <guid isPermaLink="false">1528714260000</guid>
             <pubDate>Mon, 11 Jun 2018 10:51:00 GMT</pubDate>
         </item>

@@ -20,7 +20,7 @@ async function RSSfeed(posts, c) {
     for(let post of posts) {
       feed.item({
         title: post.title,
-        description: post.content.slice(0, 50),
+        description: post.content,
         guid: new Date(post.date).getTime(),
         date: post.date
       });
