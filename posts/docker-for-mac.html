@@ -1,0 +1,23 @@
+---
+title: "Install Docker for Mac on MacOS High Sierra"
+url: "docker-high-sierra-spctl"
+date: "2018-09-10 13:15"
+---
+
+<p>Sorry for not posting for such a long time.</p>
+
+<p>I just re-installed MacOS a few weeks ago and had to install Docker for Mac right now. For some reason, it kept giving me a weird error about "Docker" being corrupt.</p>
+
+<p>I'm running MacOS High Sierra 10.13.6</p>
+
+<p>It took me about an hour of fighting to realise what was wrong. I checked the Security and Privacy section of System Prefs and noticed that there's no "Anywhere" option in the "Allow apps downloaded from: " section. I googled around a little and realised that I had to switch off <a href="https://support.apple.com/en-in/HT202491">Gatekeeper</a>. You can do that with - </p>
+
+<p>
+  <code>sudo spctl --master-disable</code>
+</p>
+
+<p>Before that, I'd suggest reading the man page for <code>spctl</code> with - </p>
+
+<p>
+  <code>man spctl</code>
+</p>

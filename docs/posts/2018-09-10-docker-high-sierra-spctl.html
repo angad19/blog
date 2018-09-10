@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+  <head>
+	<title>Install Docker for Mac on MacOS High Sierra</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Noto+Sans:700,400" rel="stylesheet">
+	<link href="../assets/style.css" rel="stylesheet"/>
+</head>
+
+  <body>
+    <div class="container-fluid main">
+      <div class="full-post">
+        <a href="../" class="back">&#8617; back</a>
+        <h1>Install Docker for Mac on MacOS High Sierra</h1>
+        <div class="info">Angad Singh | 2018-09-10 13:15</div>
+        <div class="content">
+          
+<p>Sorry for not posting for such a long time.</p>
+
+<p>I just re-installed MacOS a few weeks ago and had to install Docker for Mac right now. For some reason, it kept giving me a weird error about "Docker" being corrupt.</p>
+
+<p>I'm running MacOS High Sierra 10.13.6</p>
+
+<p>It took me about an hour of fighting to realise what was wrong. I checked the Security and Privacy section of System Prefs and noticed that there's no "Anywhere" option in the "Allow apps downloaded from: " section. I googled around a little and realised that I had to switch off <a href="https://support.apple.com/en-in/HT202491">Gatekeeper</a>. You can do that with - </p>
+
+<p>
+  <code>sudo spctl --master-disable</code>
+</p>
+
+<p>Before that, I'd suggest reading the man page for <code>spctl</code> with - </p>
+
+<p>
+  <code>man spctl</code>
+</p>
+
+        </div>
+      </div>
+      <footer>
+  <a href="https://github.com/angad19" class="social" style="margin-left: 0;">github</a>
+  <a href="https://open.spotify.com/user/angad5" class="social">spotify</a>
+  <a href="mailto:angadsingh567890@gmail.com" class="social">mail</a>
+  <a href="../feed.xml">RSS</a>
+  <p>&copy; Angad Singh 2018</p>
+</footer>
+
+    </div>
+  </body>
+</html>
