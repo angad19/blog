@@ -4,8 +4,32 @@
         <description><![CDATA[Angad Singh]]></description>
         <link>http://angadsingh.me/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 23 Jul 2018 19:43:45 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 10 Sep 2018 08:26:33 GMT</lastBuildDate>
         <atom:link href="http://angadsingh.me/feed.xml/" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Install Docker for Mac on MacOS High Sierra]]></title>
+            <description><![CDATA[
+<p>Sorry for not posting for such a long time.</p>
+
+<p>I just re-installed MacOS a few weeks ago and had to install Docker for Mac right now. For some reason, it kept giving me a weird error about "Docker" being corrupt.</p>
+
+<p>I'm running MacOS High Sierra 10.13.6</p>
+
+<p>It took me about an hour of fighting to realise what was wrong. I checked the Security and Privacy section of System Prefs and noticed that there's no "Anywhere" option in the "Allow apps downloaded from: " section. I googled around a little and realised that I had to switch off <a href="https://support.apple.com/en-in/HT202491">Gatekeeper</a>. You can do that with - </p>
+
+<p>
+  <code>sudo spctl --master-disable</code>
+</p>
+
+<p>Before that, I'd suggest reading the man page for <code>spctl</code> with - </p>
+
+<p>
+  <code>man spctl</code>
+</p>
+]]></description>
+            <guid isPermaLink="false">1536565500000</guid>
+            <pubDate>Mon, 10 Sep 2018 07:45:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Writing an RSS Reader: Part 1]]></title>
             <description><![CDATA[
